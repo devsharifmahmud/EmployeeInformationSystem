@@ -7,4 +7,4 @@ def Home(request):
     context = {
         'form': form,
     }
-    return render(request, 'apps/index.html')
+    return render(request, 'apps/index.html', context)
