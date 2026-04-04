@@ -1,7 +1,5 @@
 from django.forms import ModelForm
-from app.models import Employee
-
-
+from .models import Employee
 class EmployeeForm(ModelForm):
     class Meta:
         model = Employee
