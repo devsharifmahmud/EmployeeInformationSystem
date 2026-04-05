@@ -8,5 +8,5 @@ class EmployeeForm(ModelForm):
         fields = '__all__'
 
         widgets = {
-            'name' : forms
+            'name' : forms.TextInput(attrs={'class':'form-control'}),
         }
