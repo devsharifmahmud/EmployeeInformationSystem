@@ -3,6 +3,7 @@ from .forms import EmployeeForm
 
 def Home(request):
     form = EmployeeForm()
+    if request.method == 'POST':
     context = {
         'form': form,
     }
