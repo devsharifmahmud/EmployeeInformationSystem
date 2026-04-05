@@ -4,6 +4,7 @@ from .forms import EmployeeForm
 def Home(request):
     form = EmployeeForm()
     if request.method == 'POST':
+        form = EmployeeForm(request.post)
     context = {
         'form': form,
     }
