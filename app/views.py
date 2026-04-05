@@ -5,6 +5,8 @@ def Home(request):
     form = EmployeeForm()
     if request.method == 'POST':
         form = EmployeeForm(request.post)
+        form.save()
+
     context = {
         'form': form,
     }
