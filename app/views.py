@@ -9,6 +9,8 @@ def Home(request):
         form.save()
         form = EmployeeForm()
 
+    data = Employee.objects.all()
+
     context = {
         'form': form,
     }
