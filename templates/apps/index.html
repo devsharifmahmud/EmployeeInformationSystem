@@ -30,10 +30,10 @@
         {% for i in data %}
         {{ i.name }}
         <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <th scope="row">{{ i.id }}</th>
+            <td>{{ i.name }}</td>
+            <td>{{ i.email }}</td>
+            <td>@{{ i.password }}</td>
         </tr>
         {% endfor %}
         </tbody>
