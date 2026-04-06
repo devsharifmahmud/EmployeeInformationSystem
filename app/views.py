@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import EmployeeForm
+from .models import Employee
 
 def Home(request):
     form = EmployeeForm()
