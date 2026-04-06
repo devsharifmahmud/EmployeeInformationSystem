@@ -13,5 +13,6 @@ def Home(request):
 
     context = {
         'form': form,
+        'data': data
     }
     return render(request, 'apps/index.html', context)
