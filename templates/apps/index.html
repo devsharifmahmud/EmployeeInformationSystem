@@ -4,7 +4,7 @@
 
 
 <div class="container">
-<!--  Forms  -->
+    <!--  Forms  -->
     <div class="row">
         <div class="col col-8 offset-2">
             <h1 class="alert alert-warning text-center">Employee Registration Form!</h1>
@@ -15,30 +15,29 @@
             </form>
         </div>
     </div>
-<!--  Display Data  -->
-<!--    {% for i in data %}-->
-<!--    {{ i.name }}-->
-<!--    {% endfor %}-->
+    <!--  Display Data  -->
 
     <table class="table table-striped table-hover">
-  <thead class="table-dark">
-    <tr >
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody class="">
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-
-  </tbody>
-</table>
+        <thead class="table-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for i in data %}
+        {{ i.name }}
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </div>
 
 {% endblock content %}
