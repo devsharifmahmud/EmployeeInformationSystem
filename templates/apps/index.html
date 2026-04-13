@@ -35,7 +35,7 @@
             <td>{{ i.email }}</td>
             <td>@{{ i.password }}</td>
             <td><a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
-                <form action="{% url i.id %}" method="post" class="d-inline">
+                <form action="{% url 'delete' i.id %}" method="post" class="d-inline">
                     <button type="submit"><i class="fa-solid fa-trash"></i></button>
                 </form></td>
         </tr>
