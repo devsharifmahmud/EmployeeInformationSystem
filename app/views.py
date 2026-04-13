@@ -18,3 +18,5 @@ def Home(request):
     return render(request, 'apps/index.html', context)
 
 #Delete View
+def Delete_record(request):
+    pass
