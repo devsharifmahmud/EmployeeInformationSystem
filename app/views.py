@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import EmployeeForm
 from .models import Employee
 
@@ -19,4 +19,6 @@ def Home(request):
 
 #Delete View
 def Delete_record(request, id):
-    print(id)
+    a = Employee.objects.get(pk=id)
+    a.delete()
+    return redirect('/')
