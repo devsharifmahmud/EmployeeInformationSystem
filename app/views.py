@@ -16,3 +16,5 @@ def Home(request):
         'data': data
     }
     return render(request, 'apps/index.html', context)
+
+#Delete View
