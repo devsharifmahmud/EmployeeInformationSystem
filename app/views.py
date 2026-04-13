@@ -25,4 +25,9 @@ def Delete_record(request, id):
 
 #Update View
 def Update_record(request, id):
+    data = Employee.objects.get(pk=id)
+    form = EmployeeForm(instance=data)
+    context = {
+        'form': form,
+    }
     return render(request, 'apps/index.html')
