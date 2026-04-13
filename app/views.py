@@ -24,3 +24,5 @@ def Delete_record(request, id):
     return redirect('/')
 
 #Update View
+def Update_record(request):
+    return render(request, 'apps/index.html')
