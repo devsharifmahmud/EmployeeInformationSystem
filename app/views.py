@@ -30,4 +30,4 @@ def Update_record(request, id):
     context = {
         'form': form,
     }
-    return render(request, 'apps/index.html')
+    return render(request, 'apps/index.html', context)
