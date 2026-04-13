@@ -22,3 +22,5 @@ def Delete_record(request, id):
     a = Employee.objects.get(pk=id)
     a.delete()
     return redirect('/')
+
+#Update View
