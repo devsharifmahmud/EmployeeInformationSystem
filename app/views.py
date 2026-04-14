@@ -29,6 +29,7 @@ def Update_record(request, id):
         data = Employee.objects.get(pk=id)
         form = EmployeeForm(request.POST, instance=data)
         if form.is_valid():
+            form.save()
     else:
         data = Employee.objects.get(pk=id)
         form = EmployeeForm(instance=data)
