@@ -25,6 +25,7 @@ def Delete_record(request, id):
 
 #Update View
 def Update_record(request, id):
+    if request.method == 'POST':
     data = Employee.objects.get(pk=id)
     form = EmployeeForm(instance=data)
     context = {
