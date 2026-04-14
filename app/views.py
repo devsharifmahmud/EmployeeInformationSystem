@@ -25,15 +25,19 @@ def Delete_record(request, id):
 
 #Update View
 def Update_record(request, id):
+    data = Employee.objects.get(pk=id)
+
     if request.method == 'POST':
-        data = Employee.objects.get(pk=id)
         form = EmployeeForm(request.POST, instance=data)
         if form.is_valid():
             form.save()
+            return redirect('homepage')
+
     else:
-        data = Employee.objects.get(pk=id)
         form = EmployeeForm(instance=data)
+
     context = {
         'form': form,
     }
-    return render(request, 'apps/index.html', context)
+
+    return render(request, 'apps/update.html', context)
