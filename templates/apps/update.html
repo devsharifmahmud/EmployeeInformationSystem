@@ -5,7 +5,7 @@
 <from action="" method="post">
     {% csrf_token %}
     {{ form.as_p}}
-    <input type="submit" value="Update" class="btn btn-primary">
-    <a href="{% url 'homepage' %}">Back to Home</a>
+    <input type="submit" value="Update" class="btn btn-success">
+    <a href="{% url 'homepage' %}" class="btn btn-primary">Back to Home</a>
 </from>
 {% endblock content %}
