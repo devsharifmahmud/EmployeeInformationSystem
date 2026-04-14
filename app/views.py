@@ -27,9 +27,10 @@ def Delete_record(request, id):
 def Update_record(request, id):
     if request.method == 'POST':
         data = Employee.objects.get(pk=id)
+        form = EmployeeForm(request.POST, instance=data)
+    else:
+        data = Employee.objects.get(pk=id)
         form = EmployeeForm(instance=data)
-    data = Employee.objects.get(pk=id)
-    form = EmployeeForm(instance=data)
     context = {
         'form': form,
     }
